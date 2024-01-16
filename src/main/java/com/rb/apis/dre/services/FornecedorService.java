@@ -5,9 +5,12 @@ import com.rb.apis.dre.dtos.FornecedorDtoOut;
 import com.rb.apis.dre.model.Fornecedor;
 import com.rb.apis.dre.repository.FornecedorRepository;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Objects;
 
 @Service
@@ -37,7 +40,11 @@ public class FornecedorService {
     }
 
 
+    public List<FornecedorDtoOut> listarTodosFornecedores() {
+        return null;
+    }
 
-
-
+    public Page<FornecedorDtoOut> buscarFornecedoresByParam(Long id, String nome, Pageable pageable) {
+        return null;
+    }
 }

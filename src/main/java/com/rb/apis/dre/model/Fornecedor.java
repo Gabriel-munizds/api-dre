@@ -1,6 +1,7 @@
 package com.rb.apis.dre.model;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "fornecedor", schema = "dre")
