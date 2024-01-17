@@ -12,22 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
     @Bean
-    public Queue testeQueue(){
-        return new Queue("teste", true);
-    }
-    @Bean
-    DirectExchange exchange(){
-        return new DirectExchange("exchange_test");
-    }
-    @Bean
-    Binding testeBinding(Queue testeQueue, DirectExchange exchange){
-        return BindingBuilder.bind(testeQueue).to(exchange).with("routing-key-test");
-    }
-    @Bean
-    Binding bindingTeste(Queue queue, DirectExchange exchange){
-        return BindingBuilder.bind(queue).to(exchange).with("routing-key-test");
-    }
-    @Bean
     public Jackson2JsonMessageConverter messageConverter(){
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
